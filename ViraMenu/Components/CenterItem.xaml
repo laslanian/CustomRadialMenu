@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="ViraMenu.Components.CenterItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ViraMenu.Components"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    
+    <UserControl.Resources>
+        <DoubleAnimation x:Key="ItemMouseIn"
+            Storyboard.TargetName="itemOuterShadow" Storyboard.TargetProperty="Opacity"
+            To="100" Duration="0:0:0.1" />
+
+        <DoubleAnimation x:Key="ItemMouseOut"
+            Storyboard.TargetName="itemOuterShadow" Storyboard.TargetProperty="Opacity"
+            To="0" Duration="0:0:0.1" />
+    </UserControl.Resources>
+
+    <Grid ClipToBounds="True" >
+        <Ellipse x:Name="CenterTile"
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Center"
+                 Height="{StaticResource CenterHeight}" Width="{StaticResource CenterWidth}" StrokeThickness="2" 
+                 MouseEnter="CenterTile_MouseEnter"
+                 MouseLeave="CenterTile_MouseLeave">
+           
+            <Ellipse.Fill>
+                <ImageBrush
+                    x:Name="CMIlogo"
+                    Stretch="UniformToFill" 
+                    ImageSource="{Binding RelativeSource={RelativeSource AncestorType={x:Type local:CenterItem}}, Path=ImgSrc}" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+            </Ellipse.Fill>
+            <Ellipse.BitmapEffect>
+                <DropShadowBitmapEffect x:Name="itemOuterShadow"
+                    Color="#877b77" Opacity="0"
+                    ShadowDepth="0" Direction="0"/>
+            </Ellipse.BitmapEffect>
+        </Ellipse>
+       
+    </Grid>
+</UserControl>

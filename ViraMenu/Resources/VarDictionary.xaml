@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!--Center Item-->
+    <sys:Double x:Key="CenterWidth">95</sys:Double>
+    <sys:Double x:Key="CenterHeight">95</sys:Double>
+    
+    <!--Menu Tile-->
+    <Point x:Key="TileStartPoint">0,140</Point>
+    <Point x:Key="LineOneEnd">100, 0</Point>
+    <Point x:Key="LargeArcEnd">100, 490</Point>
+    <Point x:Key="LineTwoEnd">0, 350</Point>
+
+    <Size x:Key="SmallArc_Size">100,250</Size>
+    <Size x:Key="LargeArc_Size">100,370</Size>
+
+    <sys:Double x:Key="ItemOpacity">0</sys:Double>   <!-- 1 for dev, 0 for production/video-->
+
+    <!--Sub Menu Tile-->
+    <Point x:Key="smTileStartPoint">0,60</Point>
+    <Point x:Key="smLineOneEnd">200,0</Point>
+    <Point x:Key="smLargeArcEnd">200,400</Point>
+    <Point x:Key="smLineTwoEnd">0,340</Point>
+
+    <Size x:Key="smSmallArc_Size">50,300</Size>
+    <Size x:Key="smLargeArc_Size">100,300</Size>
+
+    <sys:Double x:Key="SubItemOpacity">0</sys:Double> <!-- 1 for dev, 0 for production/video-->
+    <!--Center Menu Tile-->
+    
+    <!--Storyboards-->
+    <sys:Double x:Key="CommandAngle">119</sys:Double>
+    <sys:Double x:Key="SettingAngle">-1</sys:Double>
+    <sys:Double x:Key="AccuracyAngle">59</sys:Double>
+    <sys:Double x:Key="AddWordAngle">179</sys:Double>
+
+    
+</ResourceDictionary>
